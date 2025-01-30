@@ -23,7 +23,7 @@ const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:5174',
   `http://localhost:${TEMPORARY_PORT}`,
-  'https://slsu-procurement-office-fivn.onrender.com'
+  'https://slsu-procurement-office.onrender.com'
 ];
 
 
@@ -39,7 +39,6 @@ app.use('/uploads', cors({
   methods: ['GET'],
   allowedHeaders: ['Content-Type'],
 }), express.static(path.join(__dirname, 'uploads')));
-console.log(path.join(__dirname, 'uploads'));  // C:\Users\Khun\Videos\Argawanon\api\uploads
 
 
 // Middlewares
