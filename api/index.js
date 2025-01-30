@@ -24,7 +24,8 @@ const allowedOrigins = [
   'http://localhost:5174',
   `http://localhost:${TEMPORARY_PORT}`,
   'https://slsu-procurement-office.onrender.com',
-  'https://slsu-procurement.onrender.com'
+  'https://slsu-procurement.onrender.com',
+  process.env.FRONTEND_URL
 ];
 
 
@@ -37,9 +38,10 @@ app.use('/uploads', cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: ['GET'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type'],
 }), express.static(path.join(__dirname, 'uploads')));
+console.log(object)
 
 
 // Middlewares

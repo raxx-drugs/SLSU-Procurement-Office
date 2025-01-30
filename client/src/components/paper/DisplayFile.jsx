@@ -40,7 +40,7 @@ export default function DisplayFile({showPDF}) {
         return () => window.removeEventListener('resize', updateDimensions);
     }, []);
 
-    let nextUrl = `http://localhost:5001/uploads/${showPDF}`;
+    let nextUrl = `https://slsu-procurement.onrender.com/uploads/${showPDF}`;
     return (
 
         <div className={`p-5 bg-gradient-to-b from-blue-50 to-white flex flex-col justify-center items-center`} ref={containerRef} style={{ width: '100%', height: 'auto' }}> 
