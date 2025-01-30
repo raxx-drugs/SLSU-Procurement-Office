@@ -12,11 +12,7 @@ console.log("tnaga gasa",backendPort);
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-
-  ],
+  plugins: [react(), tailwindcss()],
   server: {
     proxy: {
       // Proxy requests to /api to your backend server
