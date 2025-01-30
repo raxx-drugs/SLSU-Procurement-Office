@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --breakpoint-xxs: 0;
+  --breakpoint-xs: 30rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+
+}
+
+*{
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+
+}
+  /* Global scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 14px; /* Set width for vertical scrollbar */
+    height: 10px; /* Set height for horizontal scrollbar */
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* background: #1f1f1f; */
+    border: 1px solid gray;
+  }
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: linear-gradient(180deg, #353535, #9c9b9b);
+    /* background: linear-gradient(180deg, #34a77b, #807f7f);  */
+    border: 4px; /* Padding effect */
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #21ee9f, #b4b4b4); /* Green on hover */
+  }
+  ::-webkit-scrollbar-corner {
+    background: #1f1f1f; /* Match the track background */
+  }
+
+  /* Admin Layout Using Grid for large screen*/
+  @layer components {
+    .grid-areas-admin-lg {
+      min-height: 100vh;
+      display: grid;
+      grid-template-areas:
+        "sidebar header "
+        "sidebar main "
+        "sidebar footer ";
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: auto 1fr;
+      transition: grid-template-areas 0.5s;
+    }
+    .grid-admin-header-lg {
+      position: sticky;
+      grid-area: header;
+    }
+  
+    .grid-admin-sidebar-lg {
+      position: sticky;
+      grid-area: sidebar;
+    }
+  
+  
+    .grid-admin-main-lg {
+      grid-area: main;
+    }
+  
+    .grid-admin-footer-lg {
+      grid-area: footer;
+    }
+  }
+
+  @layer components {
+    .grid-areas-admin-xs {
+      min-height: 100vh;
+      display: grid;
+      grid-template-areas:
+        "sidebar"
+        "header"
+        "main"
+        "footer";
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 1fr;
+      transition: grid-template-areas 0.5s;
+    }
+    .grid-admin-header-xs {
+      position: sticky;
+      grid-area: header;
+    }
+  
+    .grid-admin-sidebar-xs {
+      position: sticky;
+      grid-area: sidebar;
+    }
+  
+  
+    .grid-admin-main-xs {
+      grid-area: main;
+    }
+  
+    .grid-admin-footer-xs {
+      grid-area: footer;
+    }
+  }
+  /* Tailwind custom components */
+@layer components {
+  .sideBarBtn {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    font-weight: 600; /* font-semibold */
+    /* color: #9ea9b4; text-darkText1 */
+ 
+    cursor: pointer; /* cursor-pointer */
+    border-radius: 0 1.5rem 1.5rem 0;
+    min-height: 44px;
+  }
+
+  .sideBarBtnIcon {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    font-weight: 600; /* font-semibold */
+
+    cursor: pointer; /* cursor-pointer */
+    border-radius: 0 1.5rem 1.5rem 0;
+    min-height: 44px;
+  }
+
+  .sideBarBtn:hover,.sideBarBtnIcon:hover {
+    color: #0F172A; /* hover:text-hoverText */
+    background-color: #CBD5E1;
+  }
+}
