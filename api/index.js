@@ -41,7 +41,6 @@ app.use('/uploads', cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type'],
 }), express.static(path.join(__dirname, 'uploads')));
-console.log(object)
 
 
 // Middlewares
