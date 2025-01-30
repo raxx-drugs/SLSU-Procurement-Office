@@ -14,7 +14,7 @@ console.log("tnaga gasa",backendPort);
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),
+    tailwindcss()
 
   ],
   server: {
