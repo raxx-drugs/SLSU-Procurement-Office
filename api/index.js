@@ -23,7 +23,8 @@ const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:5174',
   `http://localhost:${TEMPORARY_PORT}`,
-  'https://slsu-procurement-office.onrender.com'
+  'https://slsu-procurement-office.onrender.com',
+  'https://slsu-procurement.onrender.com'
 ];
 
 
